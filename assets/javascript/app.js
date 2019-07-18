@@ -170,7 +170,7 @@ $(document).ready(function() {
     var imageArray = new Array();
     imageArray[0] = "<img class='center-block' src='assets/images/wholegrain.jpg'>";
     imageArray[1] = "<img class='center-block' src='assets/images/lean meat.gif'>";
-    imageArray[2]= "<img class='center-block' src=''>";
+    imageArray[2]= "<img class='center-block' src='assets/images/IBS.jpg'>";
     imageArray[3] = "<img class='center-block' src=''>";
     imageArray[4] = "<img class='center-block' src=''>";
     imageArray[5] = "<img class='center-block' src=''>";
