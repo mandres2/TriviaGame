@@ -4,7 +4,7 @@
         // (a) The objective is to create a Trivia game, where the user has x amount of seconds to answer a given question.
         // (b) What will be the game theme? What type of questions will be given?
                 // (1) This game will be based on a Nutrition and Diet Theme.
-                        // a) 10-15 "timed" multiple-choice questions
+                        // a) 10 "timed" multiple-choice questions
                         // b) For each given question, the user has 25 seconds to input an answer.
                         // c) User will be notified if he or she got the question right or wrong.
                         // d) After answering all questions, it will lead to a page where it will give the user results of how much they scored right and how much they scored wrong.
@@ -72,8 +72,8 @@ $(document).ready(function() {
         $("#mainArea").html(gameHTML);
         setTimeout(wait, 1500);
     }
-    
-    //If the user answers the question right, this function will appear. 
+
+    //If the user answers the question right, this function will appear.
 
     function generateWin() {
         correctTally++;
@@ -148,7 +148,9 @@ $(document).ready(function() {
     "Question 5",
     "Question 6",
     "Question 7",
-    "Question 8" ];
+    "Question 8",
+    "Question 9",
+    "Question 10", ];
 
     var answerArray = [
         ["Low-fat yogurt", "Cantaloupe", "Whole-Grain Bread", "Spinach"],
