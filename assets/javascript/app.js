@@ -71,7 +71,7 @@ $(document).ready(function() {
         unansweredTally++;
         gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.jpg'>" + Explanation[questionCounter];
         $("#mainArea").html(gameHTML);
-        setTimeout(wait, 5500);
+        setTimeout(wait, 8000);
     }
 
     //If the user answers the question right, this function will appear.
@@ -81,7 +81,7 @@ $(document).ready(function() {
         gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct! The answer is: " + correctAnswers[questionCounter] + "</p>" + imageArray[questionCounter] + Explanation[questionCounter];
         $("#mainArea").html(gameHTML);
 
-        setTimeout(wait, 5500);  //End generate win
+        setTimeout(wait, 8000);  //End generate win
     }
 
     //If the user answers the question wrong, this function will appear.
@@ -89,7 +89,7 @@ $(document).ready(function() {
         incorrectTally++;
         gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.jpg'>" + Explanation[questionCounter];
         $("#mainArea").html(gameHTML);
-        setTimeout(wait, 5500);
+        setTimeout(wait, 8000);
     }
     //End generate loss
 
