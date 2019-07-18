@@ -100,7 +100,7 @@ $(document).ready(function() {
 
     function wait() {
     //This function allows the ternary operator to replace if/else statements to generate more questions
-    questionCounter < 4 ?
+    questionCounter < 6 ?
         (questionCounter++,
         generateQuestions(),
         counter = 15,
@@ -150,7 +150,7 @@ $(document).ready(function() {
     "Which is least likely to lower your risk of brittle bones (osteoporosis)?",
     "Which is least likely to cause food poisoning?",
     "Which is least likely to reduce your risk of diabetes?",
-    // "Question 7",
+    "Meat eaters have a higher risk of all but one of these diseases. Which one?",
     // "Question 8",
     // "Question 9",
     // "Question 10",
@@ -164,7 +164,7 @@ $(document).ready(function() {
         ["Low-Fat Yogurt","Collard Greens","Olive Oil","Multivitamins"],
         ["Raw-Sprouts","Salad","Mayonnaise","Chicken"],
         ["Whole-Grain Cereal","Orange Juice","Nuts/Legumes","Alcoholic Beverages"],
-        // ["A","B","C","D"],
+        ["Osteoarthritis","Diabetes","Gout","non-Hodgkins Lymphoma"],
         // ["A","B","C","D"],
         ];
 
@@ -176,7 +176,7 @@ $(document).ready(function() {
     imageArray[3] = "<img class='center-block' src='assets/images/olive oil.jpg'>";
     imageArray[4] = "<img class='center-block' src='assets/images/mayonnaise.jpg'>";
     imageArray[5] = "<img class='center-block' src='assets/images/orange juice.jpg'>";
-    // imageArray[6] = "<img class='center-block' src=''>";
+    imageArray[6] = "<img class='center-block' src='assets/images/osteoarthritis.jpg'>";
     // imageArray[7] = "<img class='center-block' src=''>";
 
     //======Solutions=====//
@@ -187,7 +187,7 @@ $(document).ready(function() {
     "C. Olive Oil",
     "C. Mayonnaise",
     "B. Orange Juice",
-    // "Answer",
+    "A. Osteoarthritis",
     // "Answer"
     ];
 
@@ -199,7 +199,8 @@ $(document).ready(function() {
     "Studies suggest that vitamin D may reduce the risk of bone loss, gum disease, multiple sclerosis, and colon cancer. Shoot for 400 IU a day (600 IU if you’re over 70). Good sources include multivitamins, calcium+D supplements, milk, and some yogurts, breads, breakfast cereals, margarines, and orange juices. Sunlight is also a good source, but not in the winter north of the line that connects Los Angeles and Atlanta.",
     "Foods high in calcium (like milk, cheese, and yogurt), vitamin K (like collards, spinach, and broccoli), potassium (like fruits and vegetables), and vitamin D help strengthen your bones. The best sources of vitamin D are sunshine, a multivitamin, or a calcium+D supplement. Weight-bearing exercise (almost any activity but swimming) also protects bones and may help prevent falls by boosting balance, coordination, and strength.",
     "Fruits and vegetables (like berries, lettuce, and sprouts) can be contaminated in the fields by tainted water or manure. Contaminated poultry, beef, and eggs may cause infections when they’re undercooked. Commercial mayonnaise is pasteurized, so it’s relatively safe.",
-    "To dodge diabetes, stay lean and exercise. Studies also find a lower risk in people who drink alcoholic beverages in modest amounts (1 or 2 drinks a day for men; half a drink for women), as well as those who eat nuts, whole grains, and unsaturated fats (like the oils in salad dressing). Processed red meats (like bacon, hot dogs, and sausage), trans-fat-laden foods (like French fries, fried chicken, and pie crust), and sweets may raise diabetes risk."
+    "To dodge diabetes, stay lean and exercise. Studies also find a lower risk in people who drink alcoholic beverages in modest amounts (1 or 2 drinks a day for men; half a drink for women), as well as those who eat nuts, whole grains, and unsaturated fats (like the oils in salad dressing). Processed red meats (like bacon, hot dogs, and sausage), trans-fat-laden foods (like French fries, fried chicken, and pie crust), and sweets may raise diabetes risk.",
+    "Meat appears to increase the risk of gout because it’s rich in a compound called purine. It’s not clear why people who eat more red meat have a higher risk of non- Hodgkins lymphoma, diabetes, and colon cancer. People who eat more red meat (and less poultry, fish, fruits, vegetables, etc.) also have a higher risk of heart disease.",
     ];
 
     var questionCounter = 0;
