@@ -147,7 +147,7 @@ $(document).ready(function() {
     [ "Which is least likely to lower your blood pressure?",
     "Which is least likely to lower your risk of colon cancer?",
     "Vitamin D may reduce the risk of all but one of these. Which one?",
-    "Question 4",
+    "Which is least likely to lower your risk of brittle bones (osteoporosis)?",
     "Question 5",
     "Question 6",
     "Question 7",
@@ -157,10 +157,10 @@ $(document).ready(function() {
 
     //======Answers=====//
     var answerArray = [
-        ["Low-fat yogurt", "Cantaloupe", "Whole-Grain Bread", "Spinach"],
+        ["Low-Fat Yogurt", "Cantaloupe", "Whole-Grain Bread", "Spinach"],
         ["Lean Meat","Whole-Grain Bread","Low-Fat Milk","a Multivitamin"],
         ["Bone Loss","Colon Cancer","Multiple Sclerosis","Irritable Bowl Syndrome"],
-        ["A","B","C","D"],
+        ["Low-Fat Yogurt","Collard Greens","Olive Oil","Multivitamins"],
         ["A","B","C","D"],
         ["A","B","C","D"],
         ["A","B","C","D"],
@@ -171,7 +171,7 @@ $(document).ready(function() {
     imageArray[0] = "<img class='center-block' src='assets/images/wholegrain.jpg'>";
     imageArray[1] = "<img class='center-block' src='assets/images/lean meat.gif'>";
     imageArray[2]= "<img class='center-block' src='assets/images/IBS.jpg'>";
-    imageArray[3] = "<img class='center-block' src=''>";
+    imageArray[3] = "<img class='center-block' src='assets/images/olive oil.jpg'>";
     imageArray[4] = "<img class='center-block' src=''>";
     imageArray[5] = "<img class='center-block' src=''>";
     imageArray[6] = "<img class='center-block' src=''>";
@@ -182,7 +182,7 @@ $(document).ready(function() {
     [ "C. Whole-Grain Bread",
     "A. Lean Meat",
     "D. Irritable Bowl Syndrome",
-    "Answer",
+    "C. Olive Oil",
     "Answer",
     "Answer",
     "Answer",
@@ -194,6 +194,7 @@ $(document).ready(function() {
     "The DASH study (Dietary Approaches to Stop Hypertension) showed that a lower-fat diet rich in fruits, vegetables, and low-fat dairy foods can lower blood pressure. Researchers aren’t sure whether the potassium, magnesium, calcium, protein, fiber, or other nutrients made the difference.",
     "Meat eaters seem to have a higher risk of colon cancer, even if the meat is lean. Foods that are high in magnesium (like beans, whole grains, and leafy greens) or calcium (like milk, yogurt, and cheese) seem to protect the colon. So do multivitamins (perhaps because they contain the B-vitamin folic acid) and exercise.",
     "Studies suggest that vitamin D may reduce the risk of bone loss, gum disease, multiple sclerosis, and colon cancer. Shoot for 400 IU a day (600 IU if you’re over 70). Good sources include multivitamins, calcium+D supplements, milk, and some yogurts, breads, breakfast cereals, margarines, and orange juices. Sunlight is also a good source, but not in the winter north of the line that connects Los Angeles and Atlanta.",
+    "Foods high in calcium (like milk, cheese, and yogurt), vitamin K (like collards, spinach, and broccoli), potassium (like fruits and vegetables), and vitamin D help strengthen your bones. The best sources of vitamin D are sunshine, a multivitamin, or a calcium+D supplement (see answer #2). Weight-bearing exercise (almost any activity but swimming) also protects bones and may help prevent falls by boosting balance, coordination, and strength.",
     ];
 
     var questionCounter = 0;
