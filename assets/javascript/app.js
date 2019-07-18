@@ -69,27 +69,27 @@ $(document).ready(function() {
     // If the user ran out of time to answer the question, this function will appear.
     function timeoutLoss() {
         unansweredTally++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.jpg'>";
+        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.jpg'>" + Explanation[questionCounter];
         $("#mainArea").html(gameHTML);
-        setTimeout(wait, 1500);
+        setTimeout(wait, 5500);
     }
 
     //If the user answers the question right, this function will appear.
 
     function generateWin() {
         correctTally++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct! The answer is: " + correctAnswers[questionCounter] + "</p>" + imageArray[questionCounter];
+        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct! The answer is: " + correctAnswers[questionCounter] + "</p>" + imageArray[questionCounter] + Explanation[questionCounter];
         $("#mainArea").html(gameHTML);
 
-        setTimeout(wait, 1500);  //End generate win
+        setTimeout(wait, 5500);  //End generate win
     }
 
     //If the user answers the question wrong, this function will appear.
     function generateLoss() {
         incorrectTally++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.jpg'>";
+        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.jpg'>" + Explanation[questionCounter];
         $("#mainArea").html(gameHTML);
-        setTimeout(wait, 1500);
+        setTimeout(wait, 5500);
     }
     //End generate loss
 
@@ -141,10 +141,12 @@ $(document).ready(function() {
     var openScreen;
     var gameHTML;
     var counter = 15;
+
+    //======Questions=====//
     var questionArray =
     [ "Which is least likely to lower your blood pressure?",
-    "Question 2",
-    "Question 3",
+    "Which is least likely to lower your risk of colon cancer?",
+    "Vitamin D may reduce the risk of all but one of these. Which one?",
     "Question 4",
     "Question 5",
     "Question 6",
@@ -153,20 +155,21 @@ $(document).ready(function() {
     "Question 9",
     "Question 10", ];
 
+    //======Answers=====//
     var answerArray = [
         ["Low-fat yogurt", "Cantaloupe", "Whole-Grain Bread", "Spinach"],
-        ["A","B","C","D"],
-        ["A","B","C","D"],
+        ["Lean Meat","Whole-Grain Bread","Low-Fat Milk","a Multivitamin"],
+        ["Bone Loss","Colon Cancer","Multiple Sclerosis","Irritable Bowl Syndrome"],
         ["A","B","C","D"],
         ["A","B","C","D"],
         ["A","B","C","D"],
         ["A","B","C","D"],
         ["A","B","C","D"], ];
 
-
+    //======Images to Accompany Correct Answer=====//
     var imageArray = new Array();
     imageArray[0] = "<img class='center-block' src='assets/images/wholegrain.jpg'>";
-    imageArray[1] = "<img class='center-block' src='image placed here'>";
+    imageArray[1] = "<img class='center-block' src='assets/images/lean meat.gif'>";
     imageArray[2]= "<img class='center-block' src=''>";
     imageArray[3] = "<img class='center-block' src=''>";
     imageArray[4] = "<img class='center-block' src=''>";
@@ -174,15 +177,24 @@ $(document).ready(function() {
     imageArray[6] = "<img class='center-block' src=''>";
     imageArray[7] = "<img class='center-block' src=''>";
 
+    //======Solutions=====//
     var correctAnswers =
     [ "C. Whole-Grain Bread",
-    "Answer",
-    "Answer",
+    "A. Lean Meat",
+    "D. Irritable Bowl Syndrome",
     "Answer",
     "Answer",
     "Answer",
     "Answer",
     "Answer"];
+
+    //======Explanation to Answer=====//
+    var Explanation =
+    [
+    "The DASH study (Dietary Approaches to Stop Hypertension) showed that a lower-fat diet rich in fruits, vegetables, and low-fat dairy foods can lower blood pressure. Researchers aren’t sure whether the potassium, magnesium, calcium, protein, fiber, or other nutrients made the difference.",
+    "Meat eaters seem to have a higher risk of colon cancer, even if the meat is lean. Foods that are high in magnesium (like beans, whole grains, and leafy greens) or calcium (like milk, yogurt, and cheese) seem to protect the colon. So do multivitamins (perhaps because they contain the B-vitamin folic acid) and exercise.",
+    "Studies suggest that vitamin D may reduce the risk of bone loss, gum disease, multiple sclerosis, and colon cancer. Shoot for 400 IU a day (600 IU if you’re over 70). Good sources include multivitamins, calcium+D supplements, milk, and some yogurts, breads, breakfast cereals, margarines, and orange juices. Sunlight is also a good source, but not in the winter north of the line that connects Los Angeles and Atlanta.",
+    ];
 
     var questionCounter = 0;
     var selecterAnswer;
