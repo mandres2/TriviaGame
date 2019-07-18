@@ -8,7 +8,7 @@
                         // b) For each given question, the user has 25 seconds to input an answer.
                         // c) User will be notified if he or she got the question right or wrong.
                         // d) After answering all questions, it will lead to a page where it will give the user results of how much they scored right and how much they scored wrong.
-// 2) What is the format of this game?
+// 2) What is the format/style of this game?
         //a) First the user will see a "Welcome Page"
                 //i) This will say "Trivia Nutrtion Game," Click 'START' to Begin!
         //b) Once the user hits the start button, it will transition to the game page, where the first question is presented as well as visible countdown timer.
@@ -69,7 +69,7 @@ $(document).ready(function() {
     // If the user ran out of time to answer the question, this function will appear.
     function timeoutLoss() {
         unansweredTally++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.jpg'>" + Explanation[questionCounter];
+        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.png'>" + Explanation[questionCounter];
         $("#mainArea").html(gameHTML);
         setTimeout(wait, 6000);
     }
@@ -87,7 +87,7 @@ $(document).ready(function() {
     //If the user answers the question wrong, this function will appear.
     function generateLoss() {
         incorrectTally++;
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.jpg'>" + Explanation[questionCounter];
+        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.png'>" + Explanation[questionCounter];
         $("#mainArea").html(gameHTML);
         setTimeout(wait, 6000);
     }
