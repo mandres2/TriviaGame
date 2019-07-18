@@ -1,5 +1,5 @@
 
-// ============================ Algorithm ============================ //
+// ================================================================== Algorithm ====================================================================================== //
 // 1) What is the objective?
         // (a) The objective is to create a Trivia game, where the user has x amount of seconds to answer a given question.
         // (b) What will be the game theme? What type of questions will be given?
@@ -17,9 +17,10 @@
 
 
 
-// ============================ Program ============================ //
-
+// =================================================================== Program ======================================================================================= //
+// This function will run the entire script:
 $(document).ready(function() {
+
     // Create a function that creates the start button and initial screen
 
     function openingPage() {
