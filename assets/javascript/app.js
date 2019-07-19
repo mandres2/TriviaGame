@@ -12,14 +12,17 @@
         //a) First the user will see a "Welcome Page"
                 //i) This will say "Trivia Nutrition Game," Click 'START' to Begin!
         //b) Once the user hits the start button, it will transition to the game page, where the first question is presented as well as visible countdown timer.
-        //c) The game section will end once the user succesfully inputs an answer for all *8-10 questions, and then a result page will pop up giving the amount the user answered correctly and the amount the user answered incorrectly.
+        //c) The game section will end once the user successfully inputs an answer for all *8-10 questions, and then a result page will pop up giving the amount the user answered correctly and the amount the user answered incorrectly.
                 //i) There will be a "Reset/Play Again!" Button, which will lead back to the "Welcome Page."
-
+// 3) Small Additions to the game:
+    // a) Ideally have a sound-effect when the user clicks a button.
+    // b) **Background music ~ Should be about a minute - minute & 30 seconds.
 
 
 // =================================================================== Program ======================================================================================= //
 // This function will run the entire script:
 $(document).ready(function() {
+
 
     // Create a function that creates the start button and initial screen when the user first opens the app.
 
