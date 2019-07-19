@@ -12,7 +12,7 @@
         //a) First the user will see a "Welcome Page"
                 //i) This will say "Trivia Nutrtion Game," Click 'START' to Begin!
         //b) Once the user hits the start button, it will transition to the game page, where the first question is presented as well as visible countdown timer.
-        //c) The game section will end once the user succesfully inputs an answer for all 15 questions, and then a result page will pop up giving the amount the user answered correctly and the amount the user answered incorrectly.
+        //c) The game section will end once the user succesfully inputs an answer for all *8-10 questions, and then a result page will pop up giving the amount the user answered correctly and the amount the user answered incorrectly.
                 //i) There will be a "Reset/Play Again!" Button, which will lead back to the "Welcome Page."
 
 
@@ -103,6 +103,7 @@ $(document).ready(function() {
 
     function wait() {
     //This function allows the ternary operator to replace if/else statements to generate more questions
+    // Current value of questions: 6
     questionCounter < 6 ?
         (questionCounter++,
         generateQuestions(),
@@ -185,6 +186,9 @@ $(document).ready(function() {
     imageArray[5] = "<img class='center-block' src='assets/images/orange juice.jpg'>";
     imageArray[6] = "<img class='center-block' src='assets/images/osteoarthritis.jpg'>";
     // imageArray[7] = "<img class='center-block' src=''>";
+    // imageArray[8] = "<img class='center-block' src=''>";
+    // imageArray[9] = "<img class='center-block' src=''>";
+    // imageArray[10] = "<img class='center-block' src=''>";
 
     //======Solutions Array=====//
     var correctAnswers =
@@ -195,6 +199,9 @@ $(document).ready(function() {
     "C. Mayonnaise",
     "B. Orange Juice",
     "A. Osteoarthritis",
+    // "Answer"
+    // "Answer"
+    // "Answer"
     // "Answer"
     ];
 
@@ -208,6 +215,10 @@ $(document).ready(function() {
     "Fruits and vegetables (like berries, lettuce, and sprouts) can be contaminated in the fields by tainted water or manure. Contaminated poultry, beef, and eggs may cause infections when they’re undercooked. Commercial mayonnaise is pasteurized, so it’s relatively safe.",
     "To dodge diabetes, stay lean and exercise. Studies also find a lower risk in people who drink alcoholic beverages in modest amounts (1 or 2 drinks a day for men; half a drink for women), as well as those who eat nuts, whole grains, and unsaturated fats (like the oils in salad dressing). Processed red meats (like bacon, hot dogs, and sausage), trans-fat-laden foods (like French fries, fried chicken, and pie crust), and sweets may raise diabetes risk.",
     "Meat appears to increase the risk of gout because it’s rich in a compound called purine. It’s not clear why people who eat more red meat have a higher risk of non- Hodgkins lymphoma, diabetes, and colon cancer. People who eat more red meat (and less poultry, fish, fruits, vegetables, etc.) also have a higher risk of heart disease.",
+    // "Answer"
+    // "Answer"
+    // "Answer"
+    // "Answer"
     ];
 
     var questionCounter = 0;
