@@ -4,8 +4,8 @@
         // (a) The objective is to create a Trivia game, where the user has x amount of seconds to answer a given question.
         // (b) What will be the game theme? What type of questions will be given?
                 // (1) This game will be based on a Nutrition and Diet Theme.
-                        // a) 10 "timed" multiple-choice questions
-                        // b) For each given question, the user has 25 seconds to input an answer.
+                        // a) **8-10 "timed" multiple-choice questions
+                        // b) For each given question, the user has 15 seconds to select an answer.
                         // c) User will be notified if he or she got the question right or wrong.
                         // d) After answering all questions, it will lead to a page where it will give the user results of how much they scored right and how much they scored wrong.
 // 2) What is the format/style of this game?
@@ -21,7 +21,7 @@
 // This function will run the entire script:
 $(document).ready(function() {
 
-    // Create a function that creates the start button and initial screen
+    // Create a function that creates the start button and initial screen when the user first opens the app.
 
     function openingPage() {
         openScreen = "<p class='text-center main-button-container'><a class='btn btn-warning btn-md btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
@@ -57,8 +57,9 @@ $(document).ready(function() {
             clearInterval(theClock),
             generateLoss()
         )
-    }); // Close .answer click
+    }); // Closes .answer click
 
+    // reset button
     $("body").on("click", ".reset-button", function(event){
         clickSound.play();
         resetGame();
@@ -93,10 +94,12 @@ $(document).ready(function() {
     }
     //End generate loss
 
+    // This function generates the questions:
     function generateQuestions() {
         gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>15</span></p><p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+answerArray[questionCounter][3]+"</p>";
         $("#mainArea").html(gameHTML);
     }; //end generate question
+
 
     function wait() {
     //This function allows the ternary operator to replace if/else statements to generate more questions
@@ -122,12 +125,13 @@ $(document).ready(function() {
             $(".timer").html(counter);
         }
     }
-
+    //This is the final screen when the user finishes answering all questions.
     function finalScreen() {
         gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did:" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctTally + "</p>" + "<p>Wrong Answers: " + incorrectTally + "</p>" + "<p>Unanswered: " + unansweredTally + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-warning btn-md btn-block reset-button' href='#' role='button'>Reset Quiz!</a></p>";
         $("#mainArea").html(gameHTML);
     }
 
+    //This function resets the entire game, bringing back to Question 01.
     function resetGame() {
         questionCounter = 0;
         correctTally = 0;
@@ -138,11 +142,14 @@ $(document).ready(function() {
         timerWrapper();
     }
 
+    //This variable is that opens up the content.
     var openScreen;
+    // This important variable applies the game logic.
     var gameHTML;
+    // this is the counter for 15 seconds
     var counter = 15;
 
-    //======Questions=====//
+    //======Questions Array=====//
     var questionArray =
     [ "Which is least likely to lower your blood pressure?",
     "Which is least likely to lower your risk of colon cancer?",
@@ -156,7 +163,7 @@ $(document).ready(function() {
     // "Question 10",
     ];
 
-    //======Answers=====//
+    //======Answers Array=====//
     var answerArray = [
         ["Low-Fat Yogurt", "Cantaloupe", "Whole-Grain Bread", "Spinach"],
         ["Lean Meat","Whole-Grain Bread","Low-Fat Milk","a Multivitamin"],
@@ -168,7 +175,7 @@ $(document).ready(function() {
         // ["A","B","C","D"],
         ];
 
-    //======Images to Accompany Correct Answer=====//
+    //======Images to Accompany Correct Answer Array=====//
     var imageArray = new Array();
     imageArray[0] = "<img class='center-block' src='assets/images/wholegrain.jpg'>";
     imageArray[1] = "<img class='center-block' src='assets/images/lean meat.gif'>";
@@ -179,7 +186,7 @@ $(document).ready(function() {
     imageArray[6] = "<img class='center-block' src='assets/images/osteoarthritis.jpg'>";
     // imageArray[7] = "<img class='center-block' src=''>";
 
-    //======Solutions=====//
+    //======Solutions Array=====//
     var correctAnswers =
     [ "C. Whole-Grain Bread",
     "A. Lean Meat",
@@ -191,7 +198,7 @@ $(document).ready(function() {
     // "Answer"
     ];
 
-    //======Explanation to Answer=====//
+    //======Explanation to Answer when user answers Correctly or Incorrectly=====//
     var Explanation =
     [
     "The DASH study (Dietary Approaches to Stop Hypertension) showed that a lower-fat diet rich in fruits, vegetables, and low-fat dairy foods can lower blood pressure. Researchers aren’t sure whether the potassium, magnesium, calcium, protein, fiber, or other nutrients made the difference.",
