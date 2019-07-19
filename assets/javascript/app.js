@@ -10,7 +10,7 @@
                         // d) After answering all questions, it will lead to a page where it will give the user results of how much they scored right and how much they scored wrong.
 // 2) What is the format/style of this game?
         //a) First the user will see a "Welcome Page"
-                //i) This will say "Trivia Nutrtion Game," Click 'START' to Begin!
+                //i) This will say "Trivia Nutrition Game," Click 'START' to Begin!
         //b) Once the user hits the start button, it will transition to the game page, where the first question is presented as well as visible countdown timer.
         //c) The game section will end once the user succesfully inputs an answer for all *8-10 questions, and then a result page will pop up giving the amount the user answered correctly and the amount the user answered incorrectly.
                 //i) There will be a "Reset/Play Again!" Button, which will lead back to the "Welcome Page."
@@ -24,7 +24,7 @@ $(document).ready(function() {
     // Create a function that creates the start button and initial screen when the user first opens the app.
 
     function openingPage() {
-        openScreen = "<p class='text-center main-button-container'><a class='btn btn-warning btn-md btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
+        openScreen = "<p class='text-center main-button-container'><a class='btn btn-warning btn-md btn-block start-button' href='#' role='button'>Start Trivia</a></p>";
         $("#mainArea").append(openScreen);
     }
 
@@ -128,7 +128,7 @@ $(document).ready(function() {
     }
     //This is the final screen when the user finishes answering all questions.
     function finalScreen() {
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did:" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctTally + "</p>" + "<p>Wrong Answers: " + incorrectTally + "</p>" + "<p>Unanswered: " + unansweredTally + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-warning btn-md btn-block reset-button' href='#' role='button'>Reset Quiz</a></p>";
+        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>All done, here's how you did:" + "</p>" + "<p class='summary-correct'>Correct Answers: " + correctTally + "</p>" + "<p>Wrong Answers: " + incorrectTally + "</p>" + "<p>Unanswered: " + unansweredTally + "</p>" + "<p class='text-center reset-button-container'><a class='btn btn-warning btn-md btn-block reset-button' href='#' role='button'>Reset Trivia</a></p>";
         $("#mainArea").html(gameHTML);
     }
 
