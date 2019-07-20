@@ -106,8 +106,8 @@ $(document).ready(function() {
 
     function wait() {
     //This function allows the ternary operator to replace if/else statements to generate more questions
-    // Current value of questions: 6
-    questionCounter < 6 ?
+    // Current value of questions: 10
+    questionCounter < 9 ?
         (questionCounter++,
         generateQuestions(),
         counter = 15,
@@ -154,17 +154,17 @@ $(document).ready(function() {
     var counter = 15;
 
     //======Questions Array=====//
-    var questionArray =
-    [ "Which is least likely to lower your blood pressure?",
+var questionArray = [
+    "Which is least likely to lower your blood pressure?",
     "Which is least likely to lower your risk of colon cancer?",
     "Vitamin D may reduce the risk of all but one of these. Which one?",
     "Which is least likely to lower your risk of brittle bones (osteoporosis)?",
     "Which is least likely to cause food poisoning?",
     "Which is least likely to reduce your risk of diabetes?",
     "Meat eaters have a higher risk of all but one of these diseases. Which one?",
-    // "Question 8",
-    // "Question 9",
-    // "Question 10",
+    "In regards with how MCT Oil may help with weight loss, which of the following is least likely true?",
+    "Americans typically eat what percentage of their recommended intake of vegetables?",
+    "How much of the recommended intake of protein should be from seafood?",
     ];
 
     //======Answers Array=====//
@@ -176,8 +176,10 @@ $(document).ready(function() {
         ["Raw-Sprouts","Salad","Mayonnaise","Chicken"],
         ["Whole-Grain Cereal","Orange Juice","Nuts/Legumes","Alcoholic Beverages"],
         ["Osteoarthritis","Diabetes","Gout","non-Hodgkins Lymphoma"],
-        // ["A","B","C","D"],
-        ];
+        ["Lowers Energy Density","Burn Calories","Increase Fullness","Increase Ketones On High-Carb Diets"],
+        ["About 30%", "About 40%", "About 50%", "Less than 20%"],
+        ["5%", "20%", "40%", "60%"],
+    ];
 
     //======Images to Accompany Correct Answer Array=====//
     var imageArray = new Array();
@@ -188,24 +190,22 @@ $(document).ready(function() {
     imageArray[4] = "<img class='center-block' src='assets/images/mayonnaise.jpg'>";
     imageArray[5] = "<img class='center-block' src='assets/images/orange juice.jpg'>";
     imageArray[6] = "<img class='center-block' src='assets/images/osteoarthritis.jpg'>";
-    // imageArray[7] = "<img class='center-block' src=''>";
-    // imageArray[8] = "<img class='center-block' src=''>";
-    // imageArray[9] = "<img class='center-block' src=''>";
-    // imageArray[10] = "<img class='center-block' src=''>";
+    imageArray[7] = "<img class='center-block' src='assets/images/Low Carb Ketosis Graph.jpg'>";
+    imageArray[8] = "<img class='center-block' src='assets/images/americans food and nutrient.jpg'>";
+    imageArray[9] = "<img class='center-block' src='assets/images/seafood.jpeg'>";
 
     //======Solutions Array=====//
-    var correctAnswers =
-    [ "C. Whole-Grain Bread",
+    var correctAnswers = [
+    "C. Whole-Grain Bread",
     "A. Lean Meat",
     "D. Irritable Bowl Syndrome",
     "C. Olive Oil",
     "C. Mayonnaise",
     "B. Orange Juice",
     "A. Osteoarthritis",
-    // "Answer"
-    // "Answer"
-    // "Answer"
-    // "Answer"
+    "D. Increase Ketones On High-Carb Diets",
+    "D. Less than 20%",
+    "B. 20%",
     ];
 
     //======Explanation to Answer when user answers Correctly or Incorrectly=====//
@@ -218,10 +218,9 @@ $(document).ready(function() {
     "Fruits and vegetables (like berries, lettuce, and sprouts) can be contaminated in the fields by tainted water or manure. Contaminated poultry, beef, and eggs may cause infections when they’re undercooked. Commercial mayonnaise is pasteurized, so it’s relatively safe.",
     "To dodge diabetes, stay lean and exercise. Studies also find a lower risk in people who drink alcoholic beverages in modest amounts (1 or 2 drinks a day for men; half a drink for women), as well as those who eat nuts, whole grains, and unsaturated fats (like the oils in salad dressing). Processed red meats (like bacon, hot dogs, and sausage), trans-fat-laden foods (like French fries, fried chicken, and pie crust), and sweets may raise diabetes risk.",
     "Meat appears to increase the risk of gout because it’s rich in a compound called purine. It’s not clear why people who eat more red meat have a higher risk of non- Hodgkins lymphoma, diabetes, and colon cancer. People who eat more red meat (and less poultry, fish, fruits, vegetables, etc.) also have a higher risk of heart disease.",
-    // "Answer"
-    // "Answer"
-    // "Answer"
-    // "Answer"
+    "Low-carb Diets: Very low-carb or ketogenic diets are a effective ways to lose weight. Given that MCTs produce ketones, adding them to your diet can increase the number of carbs you can eat while staying in ketosis.",
+    "The typical American eat less than 20% of the amount of vegetables recommended in updated dietary guidelines released by the U.S. Department of Agriculture and the U.S. Department of Health and Human Services for 2015-2020. The good news is that the goal of 100% is within reach for most of us. The guidelines, which are accompanied by a new food guide icon, say we should focus on more dark green, red, and orange vegetables, beans, and peas.",
+    "Americans get an average of 3.5 ounces of seafood a week, but it's recommended that we more than double that to 8 ounces a week. That would be 20%, or a fifth, of the recommended weekly amount of protein foods. To do this, we should substitute one serving of seafood for one serving of meat or poultry each week.",
     ];
 
     var questionCounter = 0;

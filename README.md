@@ -27,8 +27,12 @@ On the final screen, show the number of correct answers, incorrect answers, and 
 Software Used:
 IDE Used: Microsoft Visual Studios Code
 Adobe XD
-Adobe LightRoom (Gave slight contrast and more texture to background image)
+Adobe LightRoom (Gave slight contrast and more texture/shadow to background image)
 Google Chrome
+
+Background music (.mp3 format):
+Artist: Moods
+Track Title: Where I Met You
 
 Background Image was pulled from Unsplash.
 
