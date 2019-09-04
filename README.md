@@ -1,12 +1,9 @@
 # TriviaGame
 
-JavaScript Assignment 2
 
 Overview
 
-In this assignment, You'll create a Trivia game using JavaScript for the logic and jQuery to manipulate HTML. Be sure to layout this app with valid HTML and stylish CSS.
-
-Option Two: Advanced Assignment (Timed Questions)
+Created a Trivia game using JavaScript for the logic and jQuery to manipulate HTML. 
 
 You'll create a trivia game that shows only one question until the player answers it or their time runs out.
 
@@ -21,8 +18,6 @@ If the player chooses the wrong answer, tell the player they selected the wrong 
 On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page).
 
 =======================================================================
-
-
 
 Software Used:
 IDE Used: Microsoft Visual Studios Code
